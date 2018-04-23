@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="CustomLayoutGroup.SL.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dxd="http://schemas.devexpress.com/winfx/2008/xaml/docking"
+             xmlns:common="clr-namespace:CustomLayoutGroup.Common"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <dxd:DockLayoutManager>
+            <common:LayoutGroupEx Orientation="Vertical">
+                <common:LayoutGroupEx GroupBorderStyle="Group" ShowCaption="True" Caption="Group">
+                    <dxd:LayoutPanel Caption="Panel1"/>
+                    <dxd:LayoutPanel Caption="Panel2"/>
+                </common:LayoutGroupEx>
+                <common:LayoutGroupEx GroupBorderStyle="GroupBox" ShowCaption="True" Caption="GroupBox">
+                    <dxd:LayoutPanel Caption="Panel3"/>
+                    <dxd:LayoutPanel Caption="Panel4"/>
+                </common:LayoutGroupEx>
+                <common:LayoutGroupEx GroupBorderStyle="Tabbed">
+                    <dxd:LayoutGroup TabCaption="Tab1">
+                        <dxd:LayoutPanel Caption="Panel5"/>
+                        <dxd:LayoutPanel Caption="Panel6"/>
+                    </dxd:LayoutGroup>
+                </common:LayoutGroupEx>
+            </common:LayoutGroupEx>
+        </dxd:DockLayoutManager>
+    </Grid>
+</UserControl>
